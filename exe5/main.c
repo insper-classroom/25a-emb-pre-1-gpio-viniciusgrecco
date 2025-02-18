@@ -23,16 +23,19 @@ int main() {
 
         if (!gpio_get(BTN_PIN)) {
             cnt_1 ++;
-            sleep_ms(1000);
+            sleep_ms(100);
             printf("Botao 1: %d\n", cnt_1);
             while (!gpio_get(BTN_PIN)) {
+                sleep_ms(20);
             };
           }
         if (!gpio_get(BTN_PIN_2)) {
             cnt_2 ++;
-            sleep_ms(1000);
+            sleep_ms(100);
             printf("Botao 2: %d\n", cnt_2);
-            while (!gpio_get(BTN_PIN_2)){};
+            while (!gpio_get(BTN_PIN_2)){
+                sleep_ms(20);
+            };
         }
     }
 }
