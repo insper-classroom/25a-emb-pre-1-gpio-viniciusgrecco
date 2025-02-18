@@ -24,8 +24,7 @@ int main() {
             sleep_ms(10); 
 
             if (!gpio_get(BTN_PIN)) {
-                cnt_1++;
-                printf("Botao 1: %d\n", cnt_1);
+                printf("Botao 1: %d\n", cnt_1++);
                 
                 
                 while (!gpio_get(BTN_PIN)) {
@@ -39,8 +38,7 @@ int main() {
             sleep_ms(10);
 
             if (!gpio_get(BTN_PIN_2)) {
-                cnt_2++;
-                printf("Botao 2: %d\n", cnt_2);
+                printf("Botao 2: %d\n", cnt_2++);
                 
                 while (!gpio_get(BTN_PIN_2)) {
                     sleep_ms(10);
